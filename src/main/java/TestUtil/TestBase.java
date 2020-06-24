@@ -34,8 +34,10 @@ public class TestBase
 
 		String browserName = prop.getProperty("browser");
 
-		if (browserName.contentEquals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "D:\\Softwares\\Chrome\\Chrome79\\chromedriver_win32\\chromedriver.exe");
+		if (browserName.contentEquals("chrome")) 
+		{
+			System.setProperty("webdriver.chrome.silentOutput","true");
+			System.setProperty("webdriver.chrome.driver", "D:\\Practise\\CucumberPOM\\src\\main\\java\\Driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
